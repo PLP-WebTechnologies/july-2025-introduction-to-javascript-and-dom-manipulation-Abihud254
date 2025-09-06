@@ -1,0 +1,234 @@
+/* Reset and base styles for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body styling: background, text color, padding */
+body {
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Main container styling: width, centering, background, shadow, padding */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+/* Heading styling: center, color, spacing */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Input section layout: flexbox, spacing */
+.input-section {
+    display: flex;
+    margin-bottom: 30px;
+    gap: 10px;
+}
+
+/* Task input field styling */
+#taskInput {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Priority select dropdown styling */
+#prioritySelect {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 160px;
+}
+
+/* General button styling */
+button {
+    padding: 12px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Filter section layout: flexbox, spacing */
+.filter-section {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Filter button default styling */
+.filter-btn {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+}
+
+/* Active filter button styling */
+.filter-btn.active {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Sort section layout: flexbox, spacing */
+.sort-section {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Sort button default styling */
+.sort-btn {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+}
+
+/* Active sort button styling */
+.sort-btn.active {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Stats section layout and background */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+
+/* Individual stat item styling */
+.stat-item {
+    text-align: center;
+}
+
+/* Stat value styling: size, color */
+.stat-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3498db;
+}
+
+/* Task list styling: remove default bullets */
+.task-list {
+    list-style-type: none;
+}
+
+/* Task item styling: layout, border, animation */
+.task-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    animation: fadeIn 0.5s;
+}
+
+/* Remove border from last task item */
+.task-item:last-child {
+    border-bottom: none;
+}
+
+/* Task text styling: spacing */
+.task-text {
+    flex: 1;
+    margin-left: 15px;
+}
+
+/* Completed task styling: strikethrough, color */
+.completed .task-text {
+    text-decoration: line-through;
+    color: #95a5a6;
+}
+
+/* High priority task: red border */
+.priority-high {
+    border-left: 5px solid #e74c3c;
+}
+
+/* Medium priority task: orange border */
+.priority-medium {
+    border-left: 5px solid #f39c12;
+}
+
+/* Low priority task: green border */
+.priority-low {
+    border-left: 5px solid #2ecc71;
+}
+
+/* Fade-in animation for tasks */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Empty state message styling */
+.empty-state {
+    text-align: center;
+    padding: 30px;
+    color: #7f8c8d;
+}
+
+/* Delete button styling */
+.delete-btn {
+    background-color: #e74c3c;
+    padding: 8px 12px;
+    font-size: 14px;
+}
+
+/* Delete button hover effect */
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Priority badge styling */
+.priority-badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* High priority badge styling */
+.priority-high .priority-badge {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* Medium priority badge styling */
+.priority-medium .priority-badge {
+    background-color: #f39c12;
+    color: white;
+}
+
+/* Low priority badge styling */
+.priority-low .priority-badge {
+    background-color: #2ecc71;
+    color: white;
+}
